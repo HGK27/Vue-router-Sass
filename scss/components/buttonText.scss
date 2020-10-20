@@ -1,0 +1,36 @@
+.buttonText {
+  padding: 16px 22px 16px 22px;
+  background-color: white;
+  border-radius: $border-radius-soft;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xxs;
+  color: $darkGrey-secondary;
+  display: flex;
+  border: 0;
+  text-transform: uppercase;
+
+  & img {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq('mobile') {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: white;
+    background-image: linear-gradient(
+      -90deg,
+      white -50%,
+      $darkGrey-secondary 100%
+    );
+    transition: 0.5s;
+    transform: translateX(0.2rem);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

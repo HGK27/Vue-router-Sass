@@ -1,0 +1,157 @@
+.header {
+  &-menu {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+
+    &-img {
+      z-index: 99;
+      margin-left: 25px;
+      margin-right: 35px;
+    }
+    &-img2 {
+      z-index: 99;
+      display: none;
+      margin-left: 25px;
+      margin-right: 35px;
+    }
+    &-search {
+      z-index: 99;
+      display: none;
+      flex-direction: row;
+      align-items: center;
+
+      @include mq('tablet') {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+        right: 25px;
+      }
+
+      &-icon {
+        width: 16px;
+        height: 16px;
+        z-index: 1;
+      }
+
+      &-input {
+        width: 300px;
+        height: 40px;
+        position: relative;
+        right: 25px;
+        border-radius: $border-radius-soft;
+        border: 0;
+        box-shadow: 1px 1px 5px $grey-secondary;
+        padding-left: 30px;
+
+        @include mq('smallDesktop') {
+          width: 200px;
+        }
+
+        @include mq('tablet') {
+          width: 60%;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+        &::placeholder {
+          color: $grey-secondary;
+        }
+      }
+    }
+    &-nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-end;
+      margin-right: 12px;
+
+      @include mq('tablet') {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        padding-top: 80px;
+        padding-bottom: 50px;
+        z-index: 1;
+        transition: 0.2s;
+        transform: translateX(100%);
+        background-color: white;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+        opacity: 0;
+      }
+
+      @include mq('mobile') {
+        padding-top: 60px;
+        padding-bottom: 20px;
+      }
+
+      &-item {
+        color: white;
+        padding: 12px;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-sm;
+        &:hover {
+          color: $red-primary;
+          transition: 0.2s;
+        }
+      }
+    }
+
+    &-menuIcon {
+      z-index: 99;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      display: none;
+      cursor: pointer;
+
+      @include mq('tablet') {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &-menuClose {
+        display: none;
+      }
+    }
+  }
+}
+
+.isShow {
+  background-color: white;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  transition: 0.2s;
+  height: 75px;
+  box-shadow: 1px 1px 5px $grey-secondary;
+
+  & a {
+    color: black;
+
+    &:hover {
+      color: $red-primary;
+      transition: 0.2s;
+    }
+  }
+}
+
+.isMenu {
+  opacity: 1;
+  transform: translateX(0%);
+  & a {
+    color: black;
+
+    &:hover {
+      color: $red-primary;
+      transition: 0.2s;
+    }
+  }
+}

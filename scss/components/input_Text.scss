@@ -1,0 +1,14 @@
+.inputText {
+  &-title {
+    color: $darkGrey-secondary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  & input {
+    &::placeholder {
+      color: 8f8f8f;
+    }
+  }
+}

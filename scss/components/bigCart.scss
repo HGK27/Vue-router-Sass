@@ -1,0 +1,28 @@
+.bigCart {
+  position: relative;
+  margin-bottom: 10px;
+  & img {
+    width: 100%;
+  }
+  & h3 {
+    color: $purple-primary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    margin-top: 10px;
+  }
+  & p {
+    color: $darkGrey-secondary;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-light;
+    margin-top: 10px;
+  }
+  & object {
+    z-index: 9;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 52.513206481933594px;
+    width: 48.8779411315918px;
+  }
+}

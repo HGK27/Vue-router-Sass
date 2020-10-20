@@ -1,0 +1,22 @@
+.superhostButton {
+  text-transform: uppercase;
+  font-size: $font-size-xxs;
+  font-weight: $font-weight-bold;
+  color: $darkGrey-secondary;
+  border: 1px solid $darkGrey-secondary;
+  padding: 8px;
+  height: 28px;
+  width: 74px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid white;
+    background-color: $red-primary;
+    color: white;
+  }
+  &:focus {
+    outline: 0;
+  }
+}

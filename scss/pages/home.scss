@@ -1,0 +1,94 @@
+body {
+  background-color: #e5e5e58e;
+}
+
+.home {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+
+  & .explorer {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: auto auto auto;
+    @include mq('mobile') {
+      grid-column-gap: 5px;
+    }
+  }
+
+  & .discover {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: auto auto auto auto auto auto;
+
+    @include mq('tablet') {
+      grid-template-columns: auto auto auto;
+    }
+
+    @include mq('mobile') {
+      display: grid;
+      grid-column-gap: 16px;
+      grid-template-columns: auto auto auto auto auto auto;
+      position: relative;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      transition: all 0.2s;
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+
+  & .housing {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 51px;
+
+    @include mq('tablet') {
+      grid-template-columns: auto auto;
+    }
+    @include mq('mobile') {
+      grid-template-columns: 100%;
+    }
+  }
+
+  & .destinations {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 100px;
+
+    @include mq('mobile') {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding-top: 88px;
+    &-column {
+      margin-top: 24px;
+    }
+
+    &-title {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: $darkGrey-secondary;
+      margin-bottom: 8px;
+    }
+    &-desc {
+      font-size: $font-size-md;
+      font-weight: $font-weight-xlight;
+      color: $darkGrey-secondary;
+      width: 571px;
+      line-height: 18.75px;
+
+      @include mq('tablet') {
+        width: 100%;
+      }
+    }
+  }
+}

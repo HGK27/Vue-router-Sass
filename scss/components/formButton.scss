@@ -1,0 +1,21 @@
+.formButton {
+  background-color: $red-primary;
+  color: white;
+  border-radius: $border-radius-soft;
+  border: 1px solid $red-primary;
+  padding: 14px 31px 14px 31px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+    background-color: rgb(200, 10, 10);
+  }
+
+  &:focus,
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(200, 10, 10);
+  }
+}

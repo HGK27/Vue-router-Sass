@@ -1,22 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
   <meta charset="utf-8">
+  <title>AirBnb</title>
+  <link rel="shortcut icon" href="./icons/Vector.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="author" content="Gürhan KIRIMLILAR">
-  <meta name="Description" content="Gürhan KIRIMLILAR tarafından yapılan bir Front-End çalışması.">
-  <title>TREEHOUSE</title>
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
-  <link rel="stylesheet" type="text/css" href="./css/generalize.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&display=swap"
-    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-  <div id="app"></div>
-  <script src="/dist/build.js"></script>
+  <header class="header">
+    <div class="header-menu">
+
+      <img class="header-menu-img" src="./icons/Vector.svg">
+      <img class="header-menu-img2" src="./icons/Vector-red.svg">
+
+      <div class="header-menu-search">
+        <object class="header-menu-search-icon" type="image/svg+xml" data="./icons/search.svg"></object>
+        <input id="search" class="header-menu-search-input" type="search" name="search" placeholder="Essayez «D.C»"
+          autocomplete="off">
+      </div>
+
+      <nav class="header-menu-nav">
+        <a href="#" class="header-menu-nav-item">Français (FR)</a>
+        <a href="#" class="header-menu-nav-item">EUR €</a>
+        <a href="#" class="header-menu-nav-item">Devenir hôte</a>
+        <a href="#" class="header-menu-nav-item">Créer son expérience</a>
+        <a href="#" class="header-menu-nav-item">Aide</a>
+        <a href="#" class="header-menu-nav-item">Inscription</a>
+        <a href="#" class="header-menu-nav-item">Connexion</a>
+      </nav>
+
+      <div class="header-menu-menuIcon">
+        <img id="menuOpen" class="header-menu-menuIcon-menuOpen" src="./icons/menu.svg">
+        <img id="menuClose" class="header-menu-menuIcon-menuClose" src="./icons/cross.svg">
+      </div>
+
+    </div>
+  </header>
+
+  <div class="fullimg">
+    <img class="fullimg-img" src="./img/HERO_BG.webp" alt="airBnb">
+  </div>
+
+  <div class="formBox">
+    <h1 class="formBox-title">Réservez des hébergements et des activités uniques.</h1>
+
+    <div class="form">
+      <div class="form-inputGroup inputText">
+        <p class="inputText-title">Où</p>
+        <input class="inputAll" placeholder="Partout">
+      </div>
+
+      <div class="form-inputGroup form-side">
+        <div class="inputText">
+          <p class="inputText-title">Arrivée</p>
+          <input class="inputAll" placeholder="jj/mm/aaaa">
+        </div>
+      </div>
+      <div class="form-inputGroup form-side">
+        <div class="inputText">
+          <p class="inputText-title">Départ</p>
+          <input class="inputAll" placeholder="jj/mm/aaaa">
+        </div>
+      </div>
+      <div class="form-inputGroup inputText">
+        <p class="inputText-title">Voyageurs</p>
+        <input class="inputAll" placeholder="Voyageurs">
+      </div>
+      <button class="form-button formButton">Rechercher</button>
+    </div>
+
+  </div>
+
+  <section class="home">
+    <!-- miniCard -->
+    <div class="home-item">
+      <h2 class="home-item-title">Explorer Airbnb</h2>
+
+      <div class="home-item-column explorer">
+        <div class="miniCart">
+          <img src="./img/logements.webp" alt="airBnb">
+          <p>Logements</p>
+        </div>
+        <div class="miniCart">
+          <img src="./img/experiences.webp" alt="airBnb">
+          <p>Expériences</p>
+        </div>
+        <div class="miniCart">
+          <img src="./img/aventure.webp" alt="airBnb">
+          <p>Aventures</p>
+        </div>
+      </div>
+    </div>
+    <!-- XbigCard -->
+    <div class="home-item">
+      <h2 class="home-item-title">Hébergements Airbnb Plus</h2>
+      <p class="home-item-desc">Une sélection de logements vérifiés selon des critères de qualité et de design</p>
+      <div class="home-item-column accommodation marginimg">
+        <img class="marginimg-w100" src="./img/armChair.webp" alt="airBnb">
+        <div class="marginimg-center">
+          <img class="marginimg-center-icon" src="./icons/Vector.svg">
+
+          <button class="buttonText">
+            Découvrir des logements
+            <img src="./icons/arrow.svg">
+          </button>
+
+        </div>
+      </div>
+    </div>
+    <!-- longCard -->
+    <div class="home-item">
+      <h2 class="home-item-title">Découvrez les aventures Airbnb</h2>
+      <p class="home-item-desc">Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et
+        logements compris</p>
+      <div class="home-item-column discover">
+
+        <div class="longCart">
+          <img src="./img/Image1.webp" alt="airBnb">
+          <h3>Cayman Islands</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image2.webp" alt="airBnb">
+          <h3>Uruguay</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image3.webp" alt="airBnb">
+          <h3>Iceland</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image4.webp" alt="airBnb">
+          <h3>Mongolia</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image5.webp" alt="airBnb">
+          <h3>Bahrain</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image6.webp" alt="airBnb">
+          <h3>Bosnia and Herzegovina</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+      </div>
+    </div>
+    <!-- columnCard -->
+    <div class="home-item">
+      <h2 class="home-item-title">Logements dans le monde entier</h2>
+      <div class="home-item-column housing">
+
+        <div class="columnCart">
+          <img src="./img/Rectangle1.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>Toledo</h2>
+            </div>
+
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle2.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>Mesa</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle3.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>Utica</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle4.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>South Bend</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle5.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>Toledo</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle6.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>Mesa</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle7.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>Utica</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="columnCart">
+          <img src="./img/Rectangle8.webp" alt="airBnb">
+          <div class="columnCart-col">
+            <div class="columnCart-col-left">
+              <button class="superhostButton">Superhost</button>
+              <h2>South Bend</h2>
+            </div>
+            <span><object type="image/svg+xml" data="./icons/Star-red.svg"></object>4.98</span>
+          </div>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- longCard -->
+    <div class="home-item">
+      <h2 class="home-item-title">Découvrez les aventures Airbnb</h2>
+      <p class="home-item-desc">Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et
+        logements compris</p>
+      <div class="home-item-column discover">
+
+        <div class="longCart">
+          <img src="./img/Image1.webp" alt="airBnb">
+          <h3>Cayman Islands</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image2.webp" alt="airBnb">
+          <h3>Uruguay</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image3.webp" alt="airBnb">
+          <h3>Iceland</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image4.webp" alt="airBnb">
+          <h3>Mongolia</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image5.webp" alt="airBnb">
+          <h3>Bahrain</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+        <div class="longCart">
+          <img src="./img/Image6.webp" alt="airBnb">
+          <h3>Bosnia and Herzegovina</h3>
+          <h4>2 Nights PACKAGE All Inclusive</h4>
+          <p>À partir de 577€/personne - 3 jours</p>
+          <span>5.0 <object type="image/svg+xml" data="./icons/Star-blue.svg"></object></span>
+        </div>
+
+      </div>
+    </div>
+    <!-- bigCard -->
+    <div class="home-item">
+      <h2 class="home-item-title">Destinations Airbnb Plus à la Une</h2>
+      <p class="home-item-desc">Voyages de plusieurs jours organisés par des experts locaux avec activités, repas et
+        logements compris</p>
+
+      <div class="home-item-column destinations">
+
+        <div class="bigCart">
+          <img src="./img/bigCartImg.webp" alt="airBnb">
+          <object data="./icons/Vector.svg"></object>
+          <h3>Plus de 200 séjours vérifiés</h3>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="bigCart">
+          <img src="./img/bigCartImg2.webp" alt="airBnb">
+          <object data="./icons/Vector.svg"></object>
+          <h3>Plus de 200 séjours vérifiés</h3>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+        <div class="bigCart">
+          <img src="./img/bigCartImg3.webp" alt="airBnb">
+          <object data="./icons/Vector.svg"></object>
+          <h3>Plus de 200 séjours vérifiés</h3>
+          <p>À partir de 577€/personne - 3 jours</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

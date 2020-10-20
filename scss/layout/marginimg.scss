@@ -1,0 +1,49 @@
+.marginimg {
+  position: relative;
+
+  &-w100 {
+    width: 100%;
+    min-height: 200px;
+    @include mq('tablet') {
+      height: auto;
+      width: auto;
+      transform: translateX(-20%);
+    }
+  }
+
+  &-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-icon {
+      width: 106px;
+      height: 114px;
+      color: $darkGrey-secondary;
+      @include mq('tablet') {
+        width: 78px;
+        height: 99px;
+      }
+      @include mq('mobile') {
+        width: 53px;
+        height: 67px;
+      }
+    }
+    & button {
+      margin-top: 38px;
+      @include mq('tablet') {
+        margin-top: 25px;
+      }
+      @include mq('mobile') {
+        margin-top: 18px;
+      }
+    }
+  }
+}

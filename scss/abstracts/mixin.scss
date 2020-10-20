@@ -1,0 +1,15 @@
+@mixin mq($width: 'mobile') {
+  @if ($width == 'mobile') {
+    @media (max-width: 762px) {
+      @content;
+    }
+  } @else if($width== 'tablet') {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if($width == 'smallDesktop') {
+    @media (max-width: 1365px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.columnCart {
+  margin-bottom: 32px;
+
+  &-col {
+    margin-top: 8px;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+
+    &-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      & h2 {
+        color: $grey-secondary;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-light;
+        margin-left: 8px;
+      }
+    }
+
+    & span {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-normal;
+      color: $darkGrey-secondary;
+      display: flex;
+      justify-content: flex-end;
+
+      & object {
+        width: 10px;
+        margin-right: 4px;
+      }
+    }
+  }
+  & img {
+    width: 100%;
+  }
+  & p {
+    margin-top: 8px;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-light;
+    color: $darkGrey-secondary;
+  }
+}
